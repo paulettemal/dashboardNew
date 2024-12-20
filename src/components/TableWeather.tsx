@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -66,7 +66,7 @@ export default function BasicTable(props: MyProp) {
           >
             Tabla Informativa
           </Typography>
-          <TableContainer component={Paper} elevation={0} sx={{ overflow: 'hidden' }}>
+          <TableContainer className="table-container" component={Paper} elevation={0} sx={{ overflow: 'hidden' }}>
             <Table sx={{ minWidth: '100%', tableLayout: 'fixed' }} aria-label="extended table">
               <TableHead>
                 <TableRow>

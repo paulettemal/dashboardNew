@@ -1,4 +1,3 @@
-import React from 'react';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import { LineChart } from '@mui/x-charts/LineChart';
@@ -31,9 +30,9 @@ export default function LineChartWeather({ items, selectedVariable }: LineChartW
         }}
     >
         <Typography variant="h6" color="primary" gutterBottom>
-            {selectedVariable
-            ? `Gráfico de ${selectedVariable.charAt(0).toUpperCase() + selectedVariable.slice(1)}`
-            : "Seleccione una variable para visualizar"}
+        {selectedVariable
+        ? `Gráfico de ${selectedVariable === 'humidity' ? 'Humedad' : selectedVariable.charAt(0).toUpperCase() + selectedVariable.slice(1)}`
+        : "Seleccione una variable para visualizar"}
         </Typography>
         {selectedVariable ? (
         <LineChart

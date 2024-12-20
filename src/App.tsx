@@ -1,5 +1,5 @@
 import './App.css';
-import Grid from '@mui/material/Grid2';
+import Grid from '@mui/material/Grid';
 import IndicatorWeather from './components/IndicatorWeather';
 import TableWeather from './components/TableWeather';
 import ControlWeather from './components/ControlWeather';
@@ -7,6 +7,7 @@ import LineChartWeather from './components/LineChartWeather';
 import { useEffect, useState } from 'react';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
+import { borderRight } from '@mui/system';
 
 interface Item {
   dateStart: string;
@@ -126,10 +127,11 @@ function App() {
           <Grid item xs={12}>
             <Paper
               sx={{
-                backgroundColor: '#e3f2fd',
+                margin: '0 2rem',
                 padding: 3,
+                backgroundColor: '#e3f2fd',
+                width: 'calc(100% - 4rem)',
                 borderRadius: 2,
-                width: '100%',
               }}
             >
               <Typography
@@ -154,11 +156,23 @@ function App() {
         </Grid>
 
         {/* Tabla */}
-        <Grid container spacing={3} mt={4}>
-          <Grid item xs={12}>
-            <TableWeather itemsIn={items} />
-          </Grid>
-        </Grid>
+        <Grid container spacing={3} mt={4} justifyContent="center">
+        <Grid item xs={12}>
+        <Paper
+        sx={{
+          padding: 3,
+          backgroundColor: '#e3f2fd',
+          borderRadius: 2,
+          borderLeft: '2px solid #ddd',
+          margin: '0 auto',
+          width: 'calc(100% - 1rem)',
+        }}
+      >
+
+      <TableWeather itemsIn={items} />
+    </Paper>
+  </Grid>
+</Grid>
       </Grid>
     </>
   );
