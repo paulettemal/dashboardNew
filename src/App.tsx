@@ -7,7 +7,6 @@ import LineChartWeather from './components/LineChartWeather';
 import { useEffect, useState } from 'react';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
-import { borderRight } from '@mui/system';
 
 interface Item {
   dateStart: string;
