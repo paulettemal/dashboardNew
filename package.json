@@ -2,7 +2,7 @@
   "name": "dashboard",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://paulettemal.github.io/dashboardPau",
+  "homepage": "https://github.com/paulettemal/dashboardPaulette.git",
   "type": "module",
   "scripts": {
     "dev": "vite",
